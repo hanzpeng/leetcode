@@ -20,13 +20,9 @@ namespace Leetcode
             if (nums.Length <= 1) return nums.Length;
             int i = 0;
             int j = 0;
-            while (j < nums.Length)
+            while (++j < nums.Length)
             {
-                while (++j < nums.Length && nums[j] == nums[i])
-                {
-                    //do nothing
-                }
-                if (j < nums.Length)
+                if (nums[j] != nums[i])
                 {
                     nums[++i] = nums[j];
                 }
