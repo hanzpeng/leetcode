@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace LeetCode
+namespace Leetcode
 {
     /*
      * 

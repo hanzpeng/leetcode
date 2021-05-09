@@ -1,12 +1,12 @@
 using NUnit.Framework;
-namespace Leetcode 
+namespace Leetcode
 {
-    public class P0000_class_name
+    public class P0026_RemoveDupFromSortedArray
     {
         [Test]
         public void Test1()
         {
-            Assert.AreEqual(1,1);          
+            Assert.AreEqual(1, 1);
         }
     }
 }

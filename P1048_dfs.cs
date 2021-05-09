@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System;
 
-namespace LeetCode
+namespace Leetcode
 {
     class P1048_dfs
     {

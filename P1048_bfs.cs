@@ -4,7 +4,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace LeetCode
+namespace Leetcode
 {
     class P1048_bfs
     {

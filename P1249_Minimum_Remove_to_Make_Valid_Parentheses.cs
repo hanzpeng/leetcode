@@ -2,7 +2,7 @@
 using System.Text;
 using NUnit.Framework;
 
-namespace LeetCode
+namespace Leetcode
 {
     class P1249_Minimum_Remove_to_Make_Valid_Parentheses
     {

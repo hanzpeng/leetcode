@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using NUnit.Framework;
 
-namespace LeetCode
+namespace Leetcode
 {
     class P494_TargetSum
     {

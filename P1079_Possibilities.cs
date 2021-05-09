@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System;
 using System.Text;
 
-namespace LeetCode
+namespace Leetcode
 {
     class P1079_Possibilities
     {
