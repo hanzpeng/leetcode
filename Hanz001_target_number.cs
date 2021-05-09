@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using NUnit.Framework;
 
-namespace Hanz001_target_number
+namespace Hanz
 {
-    class Hanz
+    class Hanz001_target_number
     {
         /****************************************************************************
         https://www.geeksforgeeks.org/number-of-ways-to-calculate-a-target-number-using-only-array-elements/

@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
+using NUnit.Framework.Internal;
+using System;
 using System.Linq;
 using System.Collections.Generic;
-using System;
-using NUnit.Framework.Internal;
 
 namespace LeetCode
 {
