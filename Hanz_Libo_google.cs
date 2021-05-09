@@ -1,9 +1,9 @@
 ﻿using NUnit.Framework;
 using System.Linq;
 
-namespace Libo_Google
+namespace Hanz
 {
-    class PLibo
+    class Libo_Google
     {
         [Test]
         public void test1(){
