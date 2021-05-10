@@ -26,19 +26,14 @@ namespace Leetcode
 
             if (k == 0) return;
 
-            int[] temp = new int[k];
+            int[] temp = new int[nums.Length];
 
-            for (int i = 0; i < k; i++)
+            for (int i = 0; i < nums.Length; i++)
             {
-                temp[i] = nums[nums.Length + i - k];
+                temp[(i + k)%nums.Length] = nums[i];
             }
 
-            for (int i = nums.Length - k - 1; i >= 0; i--)
-            {
-                nums[i + k] = nums[i];
-            }
-
-            for (int i = 0; i < k; i++)
+            for (int i = 0; i < nums.Length; i++)
             {
                 nums[i] = temp[i];
             }
