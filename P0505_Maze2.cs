@@ -50,7 +50,7 @@ The given maze does not contain border (like the red rectangle in the example pi
 The maze contains at least 2 empty spaces, and both the width and height of the maze won't exceed 100.
  * 
  * */
-    public class P505_Maze2
+    public class P0505_Maze2
     {
         [Test]
         public void Test1()

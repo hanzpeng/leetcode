@@ -5,7 +5,7 @@ using NUnit.Framework;
 
 namespace Leetcode
 {
-    class P025_ReverseLinkedList
+    class P0025_ReverseLinkedList
     {
         
         [Test]

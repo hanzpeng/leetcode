@@ -4,7 +4,7 @@ using System.Text;
 using NUnit.Framework;
 namespace Leetcode
 {
-    public class P236_LowestCommonAncestorBinaryTree
+    public class P0236_LowestCommonAncestorBinaryTree
     {
         [Test]
         public void Test1()

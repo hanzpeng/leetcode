@@ -6,7 +6,7 @@ using System.Text;
 using NUnit.Framework;
 namespace Leetcode
 {
-    public class P078_Subsets
+    public class P0078_Subsets
     {
         [Test]
         public void Test1()
