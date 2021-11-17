@@ -25,7 +25,7 @@ namespace Leetcode
             Assert.AreEqual(101, twoD[0,1]);
             Assert.AreEqual(120, twoD[2,1]);
 
-            Assert.AreEqual(1, 1);
+            Assert.AreEqual(1, MaximalPathQuality(values,edges,100));
         }
         public int MaximalPathQuality(int[] values, int[][] edges, int maxTime)
         {
