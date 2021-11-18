@@ -10,6 +10,7 @@ namespace Leetcode
         {
             Assert.AreEqual(1, 1);
             Assert.AreEqual(75, new Solution().MaximalPathQuality(new int[] { 0, 32, 10, 43 }, new int[][] { new int[] { 0, 1, 10 }, new int[] { 1, 2, 15 }, new int[] { 0, 3, 10 } }, 49));
+            Assert.AreEqual(25, new Solution().MaximalPathQuality(new int[] {5,10,15,20 }, new int[][] { new int[] { 0, 1, 10 }, new int[] { 1, 2, 10 }, new int[] { 0, 3, 10 } }, 30));
         }
         public class Solution
         {
@@ -17,16 +18,15 @@ namespace Leetcode
             int[] values;
             Dictionary<int, List<int>> g = new Dictionary<int, List<int>>();
             Dictionary<string, int> t = new Dictionary<string, int>();
-            bool[] visited;
             int maxQuality = -1;
             public int MaximalPathQuality(int[] values, int[][] edges, int maxTime)
             {
                 this.edges = edges;
                 this.values = values;
-                visited = new bool[values.Length];
+                bool[] visited = new bool[values.Length];
                 BuildGraph();
                 BuildTimes();
-                Dfs(0, 0, maxTime);
+                Dfs(0, 0, maxTime, new HashSet<int>());
                 return this.maxQuality;
             }
             void BuildGraph()
@@ -65,16 +65,16 @@ namespace Leetcode
                 }
                 return key;
             }
-            void Dfs(int node, int quality, int time)
+            void Dfs(int node, int quality, int time, HashSet<int> parents)
             {
                 if (time < 0)
                 {
                     return;
                 }
 
-                if (!visited[node])
+                if (!parents.Contains(node))
                 {
-                    visited[node] = true;
+                    parents.Add(node);
                     quality += values[node];
                 }
 
@@ -85,7 +85,7 @@ namespace Leetcode
 
                 foreach (int next in g[node])
                 {
-                    Dfs(next, quality, time - t[Key(node, next)]);
+                    Dfs(next, quality, time - t[Key(node, next)], new HashSet<int>(parents));
                 }
             }
         }
