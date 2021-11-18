@@ -2,7 +2,7 @@
 using NUnit.Framework;
 namespace Leetcode
 {
-    class P704_BinarySearch
+    class P0704_BinarySearch
     {
         [Test]
         public void test1()
