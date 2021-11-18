@@ -54,16 +54,7 @@ namespace Leetcode
             }
             string Key(int u, int v)
             {
-                string key = "";
-                if (u < v)
-                {
-                    key = u + "," + v;
-                }
-                else
-                {
-                    key = v + "," + u;
-                }
-                return key;
+                return Math.Min(u, v) + "," + Math.Max(u,v);
             }
             void Dfs(int node, int quality, int time, HashSet<int> parents)
             {
