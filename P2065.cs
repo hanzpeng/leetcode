@@ -11,6 +11,8 @@ namespace Leetcode
             Assert.AreEqual(1, 1);
             Assert.AreEqual(75, new Solution().MaximalPathQuality(new int[] { 0, 32, 10, 43 }, new int[][] { new int[] { 0, 1, 10 }, new int[] { 1, 2, 15 }, new int[] { 0, 3, 10 } }, 49));
             Assert.AreEqual(25, new Solution().MaximalPathQuality(new int[] {5,10,15,20 }, new int[][] { new int[] { 0, 1, 10 }, new int[] { 1, 2, 10 }, new int[] { 0, 3, 10 } }, 30));
+            Assert.AreEqual(7, new Solution().MaximalPathQuality(new int[] {1,2,3,4 }, new int[][] { new int[] { 0, 1, 10 }, new int[] { 1, 2, 11 }, new int[] { 2, 3, 12 },new int[] { 1, 3, 13 } }, 50));
+            Assert.AreEqual(0, new Solution().MaximalPathQuality(new int[] {0,1,2 }, new int[][] { new int[] { 0, 2, 10 }}, 10));
         }
         public class Solution
         {
