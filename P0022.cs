@@ -16,12 +16,11 @@ namespace Leetcode
             backtrack(result, n, 0, 0, "");
             return result;
         }
-
+        //c# string is passed by value
         void backtrack(List<string> result, int n, int left, int right, string str)
         {
             if (left == n)
             {
-                string newStr = str;
                 for (int i = 1; i <= n - right; i++)
                 {
                     str += ")";
@@ -29,14 +28,17 @@ namespace Leetcode
                 result.Add(str);
                 return;
             }
-            if (left == right)
+            else if (left == right)
             {
                 backtrack(result, n, left + 1, right, str + "(");
             }
-            if (left > right)
+            else if (left > right)
             {
                 backtrack(result, n, left + 1, right, str + "(");
                 backtrack(result, n, left, right + 1, str + ")");
+            }
+            else{
+                //should not come here
             }
         }
     }
