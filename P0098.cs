@@ -10,7 +10,6 @@ namespace Leetcode
         {
             Assert.AreEqual(1, 1);
         }
-
         public class TreeNode
         {
             public int val;
@@ -24,46 +23,11 @@ namespace Leetcode
             }
         }
 
-        Dictionary<TreeNode, int> Min = new Dictionary<TreeNode, int>();
-        Dictionary<TreeNode, int> Max = new Dictionary<TreeNode, int>();
-        public bool IsValidBST(TreeNode root)
+        public bool IsValidBST(TreeNode root, int? min = null, int? max = null)
         {
             if (root == null) return true;
-            if (!IsValidBST(root.left) || !IsValidBST(root.right)) return false;
-            if (root.left == null && root.right == null)
-            {
-                Min[root] = root.val;
-                Max[root] = root.val;
-                return true;
-            }
-
-            if (root.left != null)
-            {
-                if (Max[root.left] >= root.val)
-                {
-                    return false;
-                }
-                Min[root] = Min[root.left];
-            }
-            else
-            {
-                Min[root] = root.val;
-            }
-
-            if (root.right != null)
-            {
-                if (Min[root.right] <= root.val)
-                {
-                    return false;
-                }
-                Max[root] = Max[root.right];
-            }
-            else
-            {
-                Max[root] = root.val;
-            }
-
-            return true;
+            if ((min.HasValue && root.val <= min) || (max.HasValue && root.val >= max)) return false;
+            return IsValidBST(root.left, min, root.val) && IsValidBST(root.right, root.val, max);
         }
     }
 }
