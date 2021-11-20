@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 namespace Leetcode
 {
-    public class P0098
+    public class P0098_ValidBST
     {
         [Test]
         public void Test1()
